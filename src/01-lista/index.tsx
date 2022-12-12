@@ -20,14 +20,14 @@ const Lista01 = () => {
 
   return (
     <div>
-      <button onClick={loadList}>Buscar</button>
+      <button onClick={loadList} disabled={loading}>Buscar</button>
       <div>
-        {lista === null && <>Clique em buscar</>}
         {loading && <>Loading</>}
-        {!error && !loading && lista && (
-          lista.map(x => (<div key={x.id}>{x.id}</div>))
+        {!loading && !error && lista === null && <>Clique em buscar</>}
+        {!loading && !error && lista && (
+          lista.map(x => (<div key={x.id}>{x.nome}</div>))
         )}
-        {error && <b>{error}</b>}
+        {!loading && error && <b>{error}</b>}
       </div>
     </div>
   )

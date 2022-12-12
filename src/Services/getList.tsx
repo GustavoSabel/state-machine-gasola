@@ -1,17 +1,13 @@
 export type Item = {
   id: number
+  nome: string
 }
 
 const result: Item[] = [
-  {
-    id: 1
-  }, {
-    id: 2
-  }, {
-    id: 3
-  }, {
-    id: 4
-  },
+  { id: 1, nome: 'Item 01' },
+  { id: 2, nome: 'Item 02' },
+  { id: 3, nome: 'Item 03' },
+  { id: 4, nome: 'Item 04' },
 ]
 
 const getList = (): Promise<Item[]> => {
