@@ -1,8 +1,14 @@
 import { Lista01 } from './01-lista'
+import { Lista02 } from './02-lista'
+
 
 function App() {
   return (
-    <Lista01 />
+    <div>
+      <Lista01 />
+      <hr/>
+      <Lista02 />
+    </div>
   );
 }
 

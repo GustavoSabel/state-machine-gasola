@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { getList, Item } from "../Services/getList"
 
 const Lista01 = () => {
-  const [lista, setLista] = useState<Item[]>([])
+  const [lista, setLista] = useState<Item[] | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -18,16 +18,13 @@ const Lista01 = () => {
     } 
   }
 
-  useEffect(() => {
-    loadList()
-  }, [])
-
   return (
     <div>
       <button onClick={loadList}>Buscar</button>
       <div>
+        {lista === null && <>Clique em buscar</>}
         {loading && <>Loading</>}
-        {!error && !loading && (
+        {!error && !loading && lista && (
           lista.map(x => (<div key={x.id}>{x.id}</div>))
         )}
         {error && <b>{error}</b>}
