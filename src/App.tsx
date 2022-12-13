@@ -1,5 +1,6 @@
 import { Lista01 } from './01-lista'
 import { Lista02 } from './02-lista'
+import { Lista03 } from './03-lista'
 
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
       <Lista01 />
       <hr/>
       <Lista02 />
+      <hr/>
+      <Lista03 />
     </div>
   );
 }
