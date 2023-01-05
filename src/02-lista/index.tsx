@@ -3,6 +3,7 @@ import { getList, Item } from "../Services/getList"
 import { createMachine } from 'xstate'
 import { useMachine } from '@xstate/react'
 
+/** Usando máquina de estado em vez de vários states */
 const loadingListaMachine = createMachine({
   id: 'loadLista',
   initial: 'inicial',

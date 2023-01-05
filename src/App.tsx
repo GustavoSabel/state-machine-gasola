@@ -8,12 +8,12 @@ function App() {
   return (
     <div>
       <Lista01 />
-      <hr/>
-      <Lista02 />
-      <hr/>
-      <Lista03 />
-      <hr/>
-      <Lista04 />
+      {/* <hr/>
+      <Lista02 /> */}
+      {/* <hr/>
+      <Lista03 /> */}
+      {/* <hr/>
+      <Lista04 /> */}
     </div>
   );
 }
